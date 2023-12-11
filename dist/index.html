@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Gmail Clone</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="output.css">
-    </head>
-    <body>
-         <!-- header starts  -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="m-0 p-0 h-full overflow-y-hidden">
+    <!-- header starts  -->
     <header class="flex justify-between items-center ">
         <!-- header left  -->
         <div class="flex items-center">
-            <span  class="cursor-pointer p-3 material-symbols-outlined">menu</span>
-            <img class="w-20"
+            <span class="cursor-pointer p-3 material-symbols-outlined">menu</span>
+            <img class="w-20 "
                 src="https://static.dezeen.com/uploads/2020/10/gmail-google-logo-rebrand-workspace-design_dezeen_2364_col_0.jpg"
                 alt="">
         </div>
 
         <!-- header middle  -->
-        <div style="flex: 0.7;" class="flex items-center p-3 bg-slate-100 rounded-xl">
-            <span class="material-symbols-outlined"> search </span>
-            <input class="border-0 w-full p-3 outline-none font-normal bg-transparent" type="text " placeholder="Search in emails">
+        <div style="flex: 0.7;" class="flex items-center m-4 bg-slate-100 rounded-full">
+            <span class="material-symbols-outlined ml-3"> search </span>
+            <input class="border-0 w-full p-3 outline-none font-normal bg-transparent" type="text "
+                placeholder="Search in emails">
             <span class="material-symbols-outlined">arrow_drop_down</span>
         </div>
 
@@ -34,5 +36,449 @@
         </div>
     </header>
     <!-- header ends  -->
-    </body>
+
+    <!-- main body starts  -->
+    <main class="flex h-full">
+
+        <!-- sidebar starts  -->
+        <div style="flex: 0.3;" class="max-w-xs p-5 ml-3 border">
+            <button class="flex items-center py-4 px-4  rounded-full shadow text-gray-800 cursor-pointer outline-none ">
+                <span class="material-symbols-outlined px-2">
+                    add
+                </span>
+                Compose
+            </button>
+
+            <!-- sidebar options  -->
+            <div class="bg-blue-200 p-2 flex text-gray-600 mt-5 my-3 items-center  rounded-3xl cursor-pointer">
+                <span class="material-symbols-outlined pr-4">
+                    inbox
+                </span>
+                <h3>Inbox</h3>
+            </div>
+            <div class="flex p-2 text-gray-600  my-3 items-center  rounded-3xl cursor-pointer">
+                <span class="material-symbols-outlined pr-4">
+                    star
+                </span>
+                <h3>Starred</h3>
+            </div>
+            <div class="flex p-2 text-gray-600  my-3 items-center  rounded-3xl cursor-pointer">
+                <span class="material-symbols-outlined pr-4">
+                    snooze
+                </span>
+                <h3>Snoozed</h3>
+            </div>
+            <div class="flex p-2 text-gray-600  my-3 items-center  rounded-3xl cursor-pointer">
+                <span class="material-symbols-outlined pr-4">
+                    label_important
+                </span>
+                <h3>Important</h3>
+            </div>
+            <div class="flex p-2 text-gray-600  my-3 items-center  rounded-3xl cursor-pointer">
+                <span class="material-symbols-outlined pr-4">
+                    near_me
+                </span>
+                <h3>Sent</h3>
+            </div>
+            <div class="flex p-2 text-gray-600  my-3 items-center  rounded-3xl cursor-pointer">
+                <span class="material-symbols-outlined pr-4">
+                    note
+                </span>
+                <h3>Drafts</h3>
+            </div>
+            <div class="flex p-2 text-gray-600  my-3 items-center  rounded-3xl cursor-pointer">
+                <span class="material-symbols-outlined pr-4">
+                    expand_more
+                </span>
+                <h3>More</h3>
+            </div>
+
+            <!-- sidebar footer  -->
+            <div class="text-gray-600 flex items-center">
+                <!-- sidebar footer icons  -->
+                <span class="material-symbols-outlined m-3">
+                    person
+                </span>
+                <span class="material-symbols-outlined m-3">
+                    duo
+                </span>
+                <span class="material-symbols-outlined m-3">
+                    call
+                </span>
+            </div>
+        </div>
+        <!-- sidebar ends  -->
+
+        <!-- email list starts here  -->
+        <div class="flex-1 overflow-scroll">
+            <!-- settings start -->
+            <div class="sticky top-0 flex justify-between border p-2 z-50">
+                <!-- email list setting left -->
+                <div class="text-gray-600 flex items-center">
+                    <input type="checkbox">
+                    <span class="material-symbols-outlined m-1 cursor-pointer">
+                        arrow_drop_down
+                    </span>
+                    <span class="material-symbols-outlined m-1 cursor-pointer">
+                        redo
+                    </span>
+                    <span class="material-symbols-outlined m-1 cursor-pointer">
+                        more_vert
+                    </span>
+                </div>
+                <!-- email list setting right -->
+                <div class="text-gray-600">
+                    <span class="material-symbols-outlined m-1 cursor-pointer">
+                        chevron_left
+                    </span>
+                    <span class="material-symbols-outlined m-1 cursor-pointer">
+                        chevron_right
+                    </span>
+                    <span class="material-symbols-outlined m-1 cursor-pointer">
+                        keyboard_hide
+                    </span>
+                    <span class="material-symbols-outlined m-1 cursor-pointer">
+                        settings
+                    </span>
+                </div>
+            </div>
+            <!-- settings ends -->
+
+            
+            <!-- section starts  -->
+            <!-- email list section  -->
+            <div class="flex flex-1 justify-around text-gray-600 p-4 stick border">
+                <div style="border-bottom: 4px solid blue;" class="flex text-blue-600 ">
+                    <span class="material-symbols-outlined mr-1">
+                        inbox
+                        </span>   
+                    <h4>Primary</h4>    
+                </div>
+                <div class="flex">
+                    <span class="material-symbols-outlined mr-1">
+                        people
+                        </span>   
+                    <h4>Social</h4>    
+                </div>
+                <div class="flex">
+                    <span class="material-symbols-outlined mr-1">
+                        local_offer
+                        </span>   
+                    <h4>Promotions</h4>    
+                </div>
+            </div>
+            <!-- section ends  -->
+
+            <!-- email list row start  -->
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <div class="">
+                <div class="flex items-center justify-between p-2 border">
+                    <div class="text-gray-500">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">label_important</span>
+                    </div>
+                    <h4>Youtube</h4>
+                    <div class="">
+                        <h4>Important mail step verification<span>
+                            cccccccccc
+                        </span></h4>
+                    </div>
+                   <p>10pm</p> 
+                </div>
+            </div>
+            <!-- email list row end -->
+        </div>
+        <!-- email list ends here -->
+    </main>
+    <!-- main body ends  -->
+</body>
+
 </html>
